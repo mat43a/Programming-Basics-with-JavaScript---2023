@@ -1,0 +1,11 @@
+function calculatePrice([squareMeters])
+ {
+    const pricePerSqM = 7.61;
+    const discountPercentage = 18;
+    const totalPrice = squareMeters * pricePerSqM;
+    const discount = totalPrice * (discountPercentage / 100);
+    const finalPrice = totalPrice - discount;
+    
+    console.log(`The final price is: ${finalPrice.toFixed(2)} lv.`);
+    console.log(`The discount is: ${discount.toFixed(2)} lv.`);
+  }
