@@ -1,0 +1,6 @@
+function calculateProjectHours([name, projects])
+ {
+    const hoursPerProject = 3;
+    const totalHours = projects * hoursPerProject;
+    console.log(`The architect ${name} will need ${totalHours} hours to complete ${projects} project/s.`);
+  }
