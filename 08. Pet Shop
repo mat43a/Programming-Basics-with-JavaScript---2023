@@ -1,0 +1,7 @@
+function calculateFoodCost([dogFoodQty, catFoodQty])
+ {
+    let dogFoodCost = dogFoodQty * 2.5;
+    let catFoodCost = catFoodQty * 4;
+    let totalCost = dogFoodCost + catFoodCost;
+    console.log(`${totalCost} lv.`);
+  }
