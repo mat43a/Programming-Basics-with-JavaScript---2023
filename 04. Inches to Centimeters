@@ -1,0 +1,5 @@
+function convertInchesToCentimeters(inches) 
+{
+    const centimeters = inches * 2.54;
+    return centimeters;
+}
