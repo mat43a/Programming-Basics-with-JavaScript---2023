@@ -1,0 +1,6 @@
+function calculateReadingTime([pagesCount, pagesPerHour, days]) 
+{
+    const hoursNeeded = pagesCount / pagesPerHour;
+    const hoursPerDay = hoursNeeded / days;
+    console.log(hoursPerDay);
+  }
