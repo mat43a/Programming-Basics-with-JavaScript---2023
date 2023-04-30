@@ -1,0 +1,10 @@
+function calculateBasketballExpenses([yearlyFee]) 
+{
+    const shoesPrice = yearlyFee - (yearlyFee * 0.4) ;
+    const outfitPrice = shoesPrice - (shoesPrice * 0.2);
+    const ballPrice = outfitPrice / 4;
+    const accessoriesPrice = ballPrice / 5;
+    const totalCost =yearlyFee + shoesPrice + outfitPrice + ballPrice + accessoriesPrice;
+    
+    console.log(totalCost);
+  }
