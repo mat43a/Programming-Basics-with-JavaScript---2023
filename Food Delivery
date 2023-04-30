@@ -1,0 +1,14 @@
+function calculateOrder([chickenMenus, fishMenus, vegetarianMenus]) 
+{
+    const chickenMenuPrice = 10.35;
+    const fishMenuPrice = 12.40;
+    const vegetarianMenuPrice = 8.15;
+    const dessertPercentage = 0.2;
+    const deliveryPrice = 2.5;
+  
+    const totalMenuPrice = (chickenMenus * chickenMenuPrice) + (fishMenus * fishMenuPrice) + (vegetarianMenus * vegetarianMenuPrice);
+    const dessertPrice = totalMenuPrice * dessertPercentage;
+    const totalPrice = totalMenuPrice + dessertPrice + deliveryPrice;
+  
+    return totalPrice.toFixed(2);
+  }
