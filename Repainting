@@ -1,0 +1,20 @@
+function calculateCosts([nylon, paint, thinner, hours]) 
+{
+    const nylonPrice = 1.5;
+    const paintPrice = 14.5;
+    const thinnerPrice = 5;
+    const bagPrice = 0.4;
+  
+    const totalPaint = paint * 1.1;
+    const totalNylon = nylon + 2;
+    
+    const paintCost = totalPaint * paintPrice;
+    const nylonCost = totalNylon * nylonPrice;
+    const thinnerCost = thinner * thinnerPrice;
+  
+    const totalMaterialCost = paintCost + nylonCost + thinnerCost + bagPrice;
+    const laborCost = (totalMaterialCost* 0.3) * hours;
+    const totalCost = totalMaterialCost + laborCost;
+  
+    console.log(totalCost.toFixed(2));
+  }
