@@ -1,0 +1,9 @@
+function calculateAquariumVolume([length, width, height, percent])
+ {
+    const volume = length * width * height;
+    const liters = volume * 0.001; // convert cm^3 to liters
+    const occupiedVolume = percent / 100;
+    const waterVolume = liters * ( 1 - occupiedVolume) ;
+    
+    console.log(waterVolume);
+  }
