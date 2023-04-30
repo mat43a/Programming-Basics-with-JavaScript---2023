@@ -1,0 +1,12 @@
+function calculateTotalCost([pensCount, markersCount, cleanerLiters, discountPercent]) 
+{
+    const penPrice = 5.80;
+    const markerPrice = 7.20;
+    const cleanerPrice = 1.20;
+  
+    const subtotal = pensCount * penPrice + markersCount * markerPrice + cleanerLiters * cleanerPrice;
+    const discountAmount = subtotal * discountPercent / 100;
+    const total = subtotal - discountAmount;
+  
+    console.log(total)
+  }
