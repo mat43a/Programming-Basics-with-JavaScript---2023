@@ -1,0 +1,12 @@
+function DepositCalculator(input) 
+{
+ const depositedAmount = Number(input[0]);
+const depositTermMonths = Number(input[1]);
+const annualInterestRate = Number(input[2]);
+
+const monthlyInterestRate = annualInterestRate / 100;
+const finalAmount = depositedAmount + depositTermMonths * ((depositedAmount * monthlyInterestRate)/12);
+
+console.log(finalAmount);
+
+}
