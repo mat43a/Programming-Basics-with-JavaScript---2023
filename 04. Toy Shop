@@ -1,0 +1,44 @@
+function toyShop(input) 
+{
+    let vacantionPrice= Number(input[0]);
+    let puzzles = Number(input[1]);
+    let dolls = Number(input[2]);
+    let teddyBears = Number(input[3]);
+    let minions = Number(input[4]);
+    let trucks = Number(input[5]);
+    // Цените на играчките
+    const puzzlePrice = 2.60;
+    const dollPrice = 3.00;
+    const teddyBearPrice = 4.10;
+    const minionPrice = 8.20;
+    const truckPrice = 2.00;
+  
+    // Общата цена на поръчката
+    let totalPrice = (puzzles * puzzlePrice) +
+                     (dolls * dollPrice) +
+                     (teddyBears * teddyBearPrice) +
+                     (minions * minionPrice) +
+                     (trucks * truckPrice);
+  
+    // Проверка за отстъпка
+    if (puzzles + dolls + teddyBears + minions + trucks >= 50) 
+     {
+      totalPrice *= 0.75;
+    }
+  
+    // Изчисляване на наема на магазина
+    let rent = totalPrice * 0.1;
+  
+    // Изчисляване на печалбата
+    let profit = totalPrice - rent;
+  
+    // Проверка дали парите ще й стигнат за екскурзия
+    if (profit >= vacantionPrice) 
+    {
+        let moneyLeft = profit - vacantionPrice;
+      console.log(`Yes! ${moneyLeft.toFixed(2)} lv left.`);
+    } else {
+        let moneyNeeded = vacantionPrice - profit;
+      console.log(`Not enough money! ${moneyNeeded.toFixed(2)} lv needed.`);
+    }
+  }
