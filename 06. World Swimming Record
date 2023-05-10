@@ -1,0 +1,21 @@
+function swimmingRecord(input) 
+{
+    let recordInSeconds = Number(input[0]);
+    let distanceInMeters = Number(input[1]);
+    let timePerMeterInSeconds = Number(input[2]);
+    // изчисляваме времето, необходимо на Иванчо за плуване на разстоянието без съпротивлението на водата
+    let timeWithoutResistance = distanceInMeters * timePerMeterInSeconds;
+    // изчисляваме колко пъти Иванчо ще се забави в резултат на съпротивлението на водата
+    let resistanceRounds = Math.floor(distanceInMeters / 15);
+    // изчисляваме общото време за плуване, като добавяме забавянето поради съпротивлението на водата
+    let totalTime = timeWithoutResistance + resistanceRounds * 12.5;
+    
+    if (totalTime < recordInSeconds) {
+      // Иван е подобрил световния рекорд
+      console.log(`Yes, he succeeded! The new world record is ${totalTime.toFixed(2)} seconds.`);
+    } else {
+      // Иван НЕ е подобрил световния рекорд
+      let secondsSlower = (totalTime - recordInSeconds).toFixed(2);
+      console.log(`No, he failed! He was ${secondsSlower} seconds slower.`);
+    }
+  }
