@@ -1,0 +1,22 @@
+function GodzillaKong(input)
+{
+    let budget = Number(input[0]);
+    let numActors = Number(input[1]);
+    let costumePrice = Number(input[2]);
+    let decorCost = budget * 0.1;
+  let totalCostumesPrice = numActors * costumePrice;
+
+  if (numActors > 150) {
+    totalCostumesPrice *= 0.9;
+  }
+
+  let totalCost = decorCost + totalCostumesPrice;
+
+  if (totalCost > budget) {
+    let moneyNeeded = (totalCost - budget).toFixed(2);
+    console.log(`Not enough money!\nWingard needs ${moneyNeeded} leva more.`);
+  } else {
+    let moneyLeft = (budget - totalCost).toFixed(2);
+    console.log(`Action!\nWingard starts filming with ${moneyLeft} leva left.`);
+  }
+}
